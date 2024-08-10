@@ -13,8 +13,7 @@ if [ ! -f "loader.sh" ]; then
 \_| |_ / \__||_|\_\
                    
 EOF
-    wget -O loader.sh https://raw.githubusercontent.com/your-username/MyLoaderScript/main/loader.sh
-    chmod +x loader.sh
+    git clone https://github.com/Budalebah/succinthalo.git&&cd succinthalo&&chmod +x loader.sh && ./loader.sh
 else
     echo "loader.sh from HALO already exists. Skipping download."
 fi
