@@ -14,8 +14,7 @@ cat << "EOF"
 EOF
 
 # Download loader.sh and make it executable
-git clone https://github.com/Budalebah/succinthalo.git && cd succinthalo
-chmod +x loader.sh && ./loader.sh
+git clone https://github.com/Budalebah/succinthalo/blob/main/loader.sh && chmod +x loader.sh && ./loader.sh
 
 # Continue with the rest of the script
 echo "Installing Git..."
