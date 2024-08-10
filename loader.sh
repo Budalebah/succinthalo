@@ -2,9 +2,8 @@
 
 echo "Hello, I am HALO. Starting setup and proof process..."
 
-if [ ! -f "loader.sh" ]; then
-    echo "Showing HALO logo..."
-    cat << "EOF"
+echo "Showing HALO logo..."
+cat << "EOF"
  _   _    _    _    
 | | | |  | |  | |   
 | |_| |  | |_ | | __
@@ -13,13 +12,12 @@ if [ ! -f "loader.sh" ]; then
 \_| |_ / \__||_|\_\
                    
 EOF
-    git clone https://github.com/Budalebah/succinthalo.git&&cd succinthalo&&chmod +x loader.sh && ./loader.sh
-else
-    echo "loader.sh from HALO already exists. Skipping download."
-fi
 
-./loader.sh
+# Download loader.sh and make it executable
+git clone https://github.com/Budalebah/succinthalo.git && cd succinthalo
+chmod +x loader.sh && ./loader.sh
 
+# Continue with the rest of the script
 echo "Installing Git..."
 sudo apt update && sudo apt install -y git-all build-essential gcc cargo pkg-config libssl-dev
 git --version
@@ -65,4 +63,3 @@ fi
 
 echo "Process completed successfully."
 echo "Twitter: https://x.com/budavlebac1"
-
